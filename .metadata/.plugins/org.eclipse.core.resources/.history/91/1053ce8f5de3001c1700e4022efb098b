@@ -1,0 +1,22 @@
+package Entities;
+
+public class Employee {
+	
+	public String name;
+	public double grossSalary;
+	public double tax;
+	public double percentage;
+	
+	public double Salary() {
+		return grossSalary - tax;
+	}
+	
+	public double IncreseSalary(double percentage){
+		this.percentage =percentage;
+		return this.Salary()  + ((percentage/100)*grossSalary); 
+	}
+	
+	public String toString() {
+		return name + "," + "$" + String.format("%.2f", Salary());
+	}
+}

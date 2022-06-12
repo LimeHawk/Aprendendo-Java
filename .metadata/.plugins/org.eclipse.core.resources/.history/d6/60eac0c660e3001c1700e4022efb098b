@@ -1,0 +1,37 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+import Entities.Employee;
+
+
+
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		Employee employee =new Employee();
+		
+		System.out.println("Employee DATA: ");
+		System.out.println("Name: ");
+		employee.name = sc.nextLine();
+		System.out.println("Gross Salary: ");
+		employee.grossSalary = sc.nextDouble();
+		System.out.println("Tax: ");
+		employee.tax= sc.nextDouble();
+		employee.salary = employee.Salary();
+		
+		System.out.println("Employee DATA " + employee);
+		
+		System.out.println("Which percentage to increase salary?");
+		employee.percentage = sc.nextDouble();
+		employee.salary = employee.IncreseSalary(employee.percentage);
+		
+		System.out.println("Updated DATA " + employee);
+		
+		sc.close();
+	}
+}

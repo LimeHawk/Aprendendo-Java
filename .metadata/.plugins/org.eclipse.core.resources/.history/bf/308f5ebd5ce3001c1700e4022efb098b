@@ -1,0 +1,37 @@
+import java.util.Locale;
+import java.util.Scanner;
+import Entities.Rectangle;
+
+
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		Rectangle rectangle = new Rectangle();
+		
+		System.out.println("Enter the values of the rectangle: ");
+		System.out.println("Widht: ");
+		rectangle.width = sc.nextDouble();
+		System.out.println("height: ");
+		rectangle.height = sc.nextDouble();
+		
+		System.out.println(rectangle.width);
+		System.out.println(rectangle.height);
+		double area = rectangle.area();
+		double perimeter = rectangle.perimeter();
+		double diagonal = rectangle.diagonal();
+		
+		System.out.println("Area = " + area );
+		
+		System.out.println("Perimeter = " + perimeter);
+		
+		System.out.println("Diagonal = " + diagonal);
+		
+		
+		sc.close();
+	}
+}

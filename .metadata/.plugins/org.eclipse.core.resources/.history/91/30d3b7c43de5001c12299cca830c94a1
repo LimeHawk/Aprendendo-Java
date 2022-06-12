@@ -1,0 +1,10 @@
+package Utils;
+
+public class CurrencyConverter {
+
+	public static double IOF = 0.06;
+	
+	public static double Converter (double dollarPrice,double currency) {
+		return dollarPrice * currency * (1 + IOF);
+	}
+}
