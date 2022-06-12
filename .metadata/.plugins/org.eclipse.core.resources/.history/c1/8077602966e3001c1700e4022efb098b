@@ -1,8 +1,0 @@
-package Utils;
-
-public class CurrencyConverter {
-
-	public static double Converter (double dollarPrice,double currency) {
-		return dollarPrice * currency * (1 + 6/100);
-	}
-}
